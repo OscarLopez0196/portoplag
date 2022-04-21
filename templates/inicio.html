@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inicio - PortoPlag App</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='icon/eco-home.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="{{url_for('inicio')}}">PortoPlag App <i class="fa fa-pagelines" aria-hidden="true"></i></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#uso">COMO USAR LA APP</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#acerca">ACERCA DE</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{url_for('login')}}">ACCEDER</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="portada text-center text-white masthead">
+        <div class="container"><img class="img-fluid d-block mx-auto mb-5" src="{{url_for('static', filename='image/logofile.png')}}" width="200px" height="200px">
+            <h1>PortoPlag</h1>
+            <hr class="star-light">
+            <h2 class="font-weight-light mb-0">Tu herramienta favorita para el análisis de plagas.</h2>
+        </div>
+    </header>
+    <section id="uso" class="portfolio">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-secondary">3 sencillos pasos</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-md-6 col-lg-4 tarjeta_pasos">
+                    <a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-1">
+                        <img class="img-fluid" src="{{url_for('static', filename='image/pasos/paso1.png')}}">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 tarjeta_pasos">
+                    <a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-2">
+                        <img class="img-fluid" src="{{url_for('static', filename='image/pasos/paso2.png')}}">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 tarjeta_pasos">
+                    <a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-3">
+                        <img class="img-fluid" src="{{url_for('static', filename='image/pasos/paso3.png')}}">
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-6"></a>
+                </div>
+            </div>
+            <p class="text-center">
+                <a href="{{url_for('login')}}" class="btn btn-outline-primary btn-xl">Comenzar</a>
+            </p>
+        </div>
+    </section>
+    <section class="acerca text-white mb-0" id="acerca">
+        <div class="container">
+            <h2 class="text-uppercase text-center text-white">acerca de</h2>
+            <hr class="star-light mb-5">
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-justify">
+                    <p class="lead"><b><kbd>PortoPlag</kbd></b> es una app de acceso libre, desarrollada por un equipo de estudiantes de la Facultad de Ciencias Informáticas de la UTM. Diseñada y codificada con mucho cariño para nuestros agricultores.</p>
+                </div>
+                <div class="col-lg-4 mr-auto text-justify">
+                    <p class="lead">La App puede ser desplegada desde múltiples dispositivos. Su diseño es fresco y muy fácil de interpretar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">CRÉDITOS</h4>
+                    <p>Diego Quiroz &amp; Cristhian Loor</p>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase">SIGUENOS EN</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social1 rounded-circle" role="button" href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social2 rounded-circle" role="button" href="#"><i class="fa fa-youtube-play fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social3 rounded-circle" role="button" href="#"><i class="fa fa-instagram fa-fw"></i></a></li>
+                        <li class="list-inline-item"></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">APP AGRÍCOLA</h4>
+                    <p class="lead mb-0"><span><strong>Con todo el&nbsp;🧡 para nuestra comunidad&nbsp;</strong>👨‍🌾<br></span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="text-center text-white copyright py-4">
+        <div class="container"><small>©&nbsp;PortoPlag App 2022</small></div>
+    </div>
+    <div class="d-lg-none scroll-to-top position-fixed rounded"><a class="text-center text-white d-block js-scroll-trigger rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a></div>
+    <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-1">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Captura en tiempo real o subida de imagen.</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{{url_for('static', filename='image/pasos/paso1.png')}}">
+                                <p class="mb-5">Existen dos modalidades para poder detectar la plaga, usted podrá subir una imagen desde algun repositorio personal o también podrá usar el módulo de detección mediante una captura en tiempo real desde su dispositivo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Cerrar ventana</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-2">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Tiempo de espera</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{{url_for('static', filename='image/pasos/paso2.png')}}">
+                                <p class="mb-5">Debe ser paciente y esperar por un momento que se analice la imagen que ha subido. En caso de la captura en tiempo real, se analizará automáticamente a partir de que se tome la foto.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Cerrar ventana</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal text-center" role="dialog" tabindex="-1" id="portfolio-modal-3">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                <div class="modal-body">
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <h2 class="text-uppercase text-secondary mb-0">Visualizar los resultados del análisis</h2>
+                                <hr class="star-dark mb-5"><img class="img-fluid mb-5" src="{{url_for('static', filename='image/pasos/paso3.png')}}">
+                                <p class="mb-5">Se mostrará una imagen de salida, en la que se identifica si la planta ha sido afectada o no, por la plaga mosca blanca.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" data-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Cerrar ventana</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/carga_pagina.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %} {% block title %}Inicio{% endblock %} {% block content %}
+<div class="jumbotron shadow-lg">
+    <h1 class="display-5 text-center text-dark">Tablero de Usuario</h1>
+    <div class="alert alert-warning alert-dismissible fade show bienvenida" role="alert"> Bienvenid@ <b><kbd>{{username}}</kbd></b> es grato saludarte.<br> Usa esta app que fue diseñada para ti.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="card bg-success mb-3" style="max-width: 540px;">
+                <a class="link_manual" href="{{ url_for('subida')}}">
+                    <div class="row g-0">
+                        <div class="analitycs_mod col-md-4 d-flex justify-content-center align-items-center p-2">
+                            <i class="fa fa-file-image-o" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-8 text-white">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Análisis Manual</h5>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card bg-danger mb-3" style="max-width: 540px;">
+                <a class="link_manual" href="{{ url_for('live')}}">
+                    <div class="row g-0">
+                        <div class="analitycs_mod col-md-4 d-flex justify-content-center align-items-center p-2">
+                            <i class="fa fa-video-camera" aria-hidden="true"></i>
+                        </div>
+                        <div class="col-md-8 text-white">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Análisis en tiempo real</h5>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

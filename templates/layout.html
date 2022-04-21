@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='icon/tablero.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.min.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body class="hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-secondary text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="{{url_for('tablero')}}">PortoPlag <i class="fa fa-pagelines" aria-hidden="true"></i></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <a class="opc p-3" href="{{ url_for('tablero') }}"><i class="fa fa-line-chart" aria-hidden="true"></i>  Inicio</a>
+                    <a class="opc p-3" href="{{ url_for('perfil') }}"><i class="fas fa-user-circle"></i>  Perfil</a>
+                    <a class="opc p-3" href="{{ url_for('logout') }}"><i class="fas fa-sign-out-alt"></i>  Salir</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container contenedor_tablero p-2">
+        <div class="row">
+            <div class="col">
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+    <footer class="text-center footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">CRÉDITOS</h4>
+                    <p>Diego Quiroz &amp; Cristhian Loor</p>
+                </div>
+                <div class="col-md-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase">SIGUENOS EN</h4>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social1 rounded-circle" role="button" href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social2 rounded-circle" role="button" href="#"><i class="fa fa-youtube-play fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social3 rounded-circle" role="button" href="#"><i class="fa fa-instagram fa-fw"></i></a></li>
+                        <li class="list-inline-item"></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-uppercase mb-4">APP AGRÍCOLA</h4>
+                    <p class="lead mb-0"><span><strong>Con todo el&nbsp;🧡 para nuestra comunidad&nbsp;</strong>👨‍🌾<br></span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="text-center text-white copyright py-4">
+        <div class="container"><small>©&nbsp;PortoPlag App 2022</small></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/carga_pagina.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+</body>
+
+</html>

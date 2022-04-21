@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso para usuarios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="shortcut icon" href="{{url_for('static', filename='icon/login.png')}}" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/styles.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="back_body hidden">
+    <div class="centrado" id="onload">
+        <div class="lds-ripple">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top text-uppercase" id="mainNav">
+        <div class="container"><a class="navbar-brand js-scroll-trigger" href="{{url_for('inicio')}}">PortoPlag App <i class="fa fa-pagelines" aria-hidden="true"></i></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler text-white bg-primary navbar-toggler-right text-uppercase rounded"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="{{url_for('inicio')}}">VOLVER A PÁGINA PRINCIPAL</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="vh-100">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+                        <form action="{{ url_for('login') }}" method="post" style="width: 23rem;" autocomplete="off">
+                            <p class="display-4 text-white">Acceso al Sistema</p>
+                            <div class="form-outline mb-4">
+                                <input type="text" name="username" id="username" class="form-control form-control-md" placeholder="Nombre de usuario" required>
+                            </div>
+                            <div class="form-outline mb-4">
+                                <input type="password" name="password" class="form-control form-control-md password1" placeholder="Contraseña" required>
+                                <span class="fa fa-fw fa-eye password-icon show-password"></span>
+                            </div>
+                            <div class="mb-4">
+                                <input type="submit" class="btn btn-info btn-block" value="Acceder">
+                            </div>
+                            <p class="text-center text-danger" style="background-color: yellow;">
+                                <i>{{msg}}</i>
+                            </p>
+                            <p>Si no tiene cuenta: <a href="{{ url_for('registro') }}" class="link-info text-white text-decoration-none p-1">Registrese aquí</a></p>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+                    <img src="{{url_for ('static', filename = '/icon/back_1.jpg')}}" alt="Imagen de Login" class="w-100 vh-100 rounded-circle" style="object-fit: cover; object-position: left;">
+                </div>
+            </div>
+        </div>
+        <footer class="text-center footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">CRÉDITOS</h4>
+                        <p>Diego Quiroz &amp; Cristhian Loor</p>
+                    </div>
+                    <div class="col-md-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase">SIGUENOS EN</h4>
+                        <ul class="list-inline">
+                            <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social1 rounded-circle" role="button" href="#"><i class="fa fa-facebook fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social2 rounded-circle" role="button" href="#"><i class="fa fa-youtube-play fa-fw"></i></a></li>
+                            <li class="list-inline-item"><a class="btn btn-outline-light text-center btn-social3 rounded-circle" role="button" href="#"><i class="fa fa-instagram fa-fw"></i></a></li>
+                            <li class="list-inline-item"></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <h4 class="text-uppercase mb-4">APP AGRÍCOLA</h4>
+                        <p class="lead mb-0"><span><strong>Con todo el&nbsp;🧡 para nuestra comunidad&nbsp;</strong>👨‍🌾<br></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="text-center text-white copyright py-4">
+            <div class="container"><small>©&nbsp;PortoPlag App 2022</small></div>
+        </div>
+        </div>
+    </section>
+
+    <script src="{{url_for('static', filename='js/script.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/password.js')}}"></script>
+    <script src="{{url_for('static', filename='js/carga_pagina.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+</body>
+
+</html>

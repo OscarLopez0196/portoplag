@@ -1,0 +1,32 @@
+{% extends 'layout.html' %} {% block title %}Perfil de Usuario{% endblock %} {% block content %}
+<link rel="shortcut icon" href="{{url_for('static', filename='icon/perfil.png')}}" type="image/x-icon">
+<div class="jumbotron shadow-lg">
+    <h1 class="display-5 text-center text-dark">Datos del Usuario</h1>
+    <div class="row">
+        <div class="col">
+            <div class="table-responsive shadow-lg">
+                <table class="table table-borderless">
+                    <thead class="bg-primary">
+                        <tr>
+                            <th class="text-light"><i class="fas fa-user-astronaut"></i>&nbsp;&nbsp;Nombres</th>
+                            <th class="text-light"><i class="fas fa-user-astronaut"></i>&nbsp;&nbsp;Apellidos</th>
+                            <th class="text-light"><i class="fas fa-user-alt"></i>&nbsp;&nbsp;Usuario</th>
+                            <th class="text-light"><i class="fas fa-lock-open"></i>&nbsp;&nbsp;Contraseña</th>
+                            <th class="text-light"><i class="fas fa-lock"></i>&nbsp;&nbsp;Contraseña confirmada</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ resu_per['name'] }}</td>
+                            <td>{{ resu_per['second_name'] }}</td>
+                            <td>{{ resu_per['username'] }}</td>
+                            <td>{{ resu_per['pass'] }}</td>
+                            <td>{{ resu_per['confirm_pass'] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
